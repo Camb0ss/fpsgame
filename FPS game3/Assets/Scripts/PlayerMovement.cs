@@ -65,4 +65,9 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Pressed");
         GameObject.FindGameObjectWithTag("IngameMenu").GetComponent<UIManager>().MenuToggle();
     }
+
+    private void OnInteract(InputValue value)
+    {
+        Invoke(nameof(Button.Interact), 0.25f);
+    }
 }

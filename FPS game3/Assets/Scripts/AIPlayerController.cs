@@ -32,10 +32,10 @@ public class AIPlayerController : MonoBehaviour
         
         if(agent.remainingDistance > agent.stoppingDistance)
         {
-            rb.Move(agent.desiredVelocity, false;
+            rb.linearVelocity = agent.desiredVelocity;
         } else
         {
-            rb.Move(Vector3.zero);
+            rb.linearVelocity = Vector3.zero;
         }
     }
 }

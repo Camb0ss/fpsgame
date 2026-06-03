@@ -1,5 +1,4 @@
 using UnityEngine;
-
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
@@ -18,7 +17,7 @@ public class Teleport : MonoBehaviour
         {
             if(canTeleport == true)
             {
-             Invoke(nameof(TeleportTo), 2f);
+             Invoke(nameof(TeleportTo), teleportTime);
             }
             else if (canTeleport != true)
             {

@@ -48,7 +48,7 @@ public class UIManager : MonoBehaviour
         {
             //the line of code below makes our blood overlay totally opaque
             deathOverlay.color = new Color(deathOverlay.color.r, deathOverlay.color.g, deathOverlay.color.b, 1);
-            mainMessage.text = "You were defeated";
+            mainMessage.text = "You lost";
         }
 
         if (GameManager.winGame)
