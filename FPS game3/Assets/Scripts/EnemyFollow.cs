@@ -10,7 +10,7 @@ public class EnemyFollow : MonoBehaviour
 
     private void Update()
     {
-        enemy.transform.position = Vector3.MoveTowards(player.transform.position, player.transform.position, speed);
+        //enemy.transform.position = Vector3.MoveTowards(player.transform.position, player.transform.position, speed);
     }
 
 
