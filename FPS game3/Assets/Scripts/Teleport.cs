@@ -12,14 +12,13 @@ public class Teleport : MonoBehaviour
     [SerializeField] private float teleportTime = 3f;
     private bool canTeleport = true;
 
-    private void OnTriggerEnter(CollectionBuilderAttribute other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
             if(canTeleport == true)
             {
-             Invoke(nameof(Teleport), 3f);
-             canTeleport = false;
+             Invoke(nameof(TeleportTo), 2f);
             }
             else if (canTeleport != true)
             {
@@ -28,11 +27,12 @@ public class Teleport : MonoBehaviour
         }
     }
 
-    private void Teleport()
+    private void TeleportTo()
     {
-     canTeleport = false;
+    canTeleport = false;
     playerg.SetActive(false);
     player.position = destination.position;
     playerg.SetActive(true);
+    canTeleport = true;
     }
 }
